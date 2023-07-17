@@ -94,10 +94,10 @@
     <label for="name"><h3>Ваше имя:</h3></label>
     <input type="text" id="name" name="name" required><br><br>
 
-    <h3>Предпочтения по напиткам (можно выбрать несколько вариантов):</h3>
-    <label for="presence1"><input type="checkbox" id="presence1" name="presence" value="Я приду"> Я приду</label><br>
-    <label for="presence2"><input type="checkbox" id="presence2" name="presence" value="Прийти не получится"> Прийти не получится</label><br>
-    <label for="presence3"><input type="checkbox" id="presence3" name="presence" value="Мне нужно больше времени, чтобы дать ответ"> Мне нужно больше времени, чтобы дать ответ</label><br>
+    <h3>Присутствие:</h3>
+    <label for="presence1"><input type="radio" id="presence1" name="presence" value="Я приду"> Я приду</label><br>
+    <label for="presence2"><input type="radio" id="presence2" name="presence" value="Прийти не получится"> Прийти не получится</label><br>
+    <label for="presence3"><input type="radio" id="presence3" name="presence" value="Мне нужно больше времени, чтобы дать ответ"> Мне нужно больше времени, чтобы дать ответ</label><br>
 
     <h3>Предпочтения по напиткам (можно выбрать несколько вариантов):</h3>
     <label for="option1"><input type="checkbox" id="option1" name="options" value="Шампанское"> Шампанское</label><br>
@@ -112,9 +112,10 @@
     <input type="submit" value="Отправить">
 </form>
 
-
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 <script type="text/javascript">
+
+
     const form = document.getElementById('survey-form');
 
     const CHAT_ID = "-1001826284527";
@@ -156,6 +157,7 @@
 
 
             console.log('Результаты опроса успешно отправлены в Телеграм.');
+            alert("Сообщение отправлено");
         } catch (error) {
             console.error('Ошибка при отправке результатов опроса в Телеграм:', error);
         }

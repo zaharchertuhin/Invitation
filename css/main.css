@@ -101,7 +101,7 @@ hr{
     min-width: 100%;
     min-height: 100%;
     flex-shrink: 0;
-    margin-right: 130px;
+
 }
 
 .event-details {
@@ -176,6 +176,7 @@ input[type="text"]{
     margin-bottom: 10px;
     font-size: 38px;
     background: black;
+    color: #9c8460;
 }
 
 input[type="submit"] {
@@ -187,15 +188,21 @@ input[type="submit"] {
     padding: 10px 20px;
     border-radius: 15px;
     cursor: pointer;
-color: #9c8460;
+    color: #9c8460;
 }
 
 input[type="submit"]:hover {
-    background-color: #45a049;
+    background-color: #9c8460;
+    color: black;
 
 }
 
-input[type="checkbox"]{
+input[type="radio"] {
+    -moz-appearance: checkbox;
+    -webkit-appearance: checkbox;
+}
+
+input[type="checkbox"], input[type="radio"]{
     width: 40px;
     height: 40px;
     margin-right: 50px;
