@@ -32,6 +32,12 @@ h2{
 
 ul{
     list-style: none;
+    font-family: 'Alexander', sans-serif;
+}
+
+li{
+    font-size: 38px;
+    margin-bottom: 15px;
 }
 
 hr{
@@ -118,6 +124,7 @@ hr{
     background-color: #9c8460;
     padding: 20px;
     text-align: center;
+    font-family: 'Alexander', sans-serif;
 }
 
 .photo-square {
@@ -134,6 +141,7 @@ hr{
 .event-schedule{
     margin: 75px auto auto auto;
     text-align: center;
+
 }
 
 .dress-code{
