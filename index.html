@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Invitation</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+        <div class="line" style="display: none">
+            <p class="lineText ">Приглашение &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+        </div>
+
+        <div class="mainBlock">
+            <div class="maintext">
+                <h1>Приглашение</h1>
+            </div>
+            <div class="mainImage">
+                <img src="image/IMG_0669.ARW" alt="">
+            </div>
+
+            <div class="event-description">
+                <p>
+                    Дорогие друзья и родные<br>
+                    Осенью состоится очень важное и радостное для нас событие — наша свадьба.<br>
+                    Этот день невозможно представить без самых близких для нас людей, мы бы очень хотели,
+                    чтобы вы провели его вместе с нами.
+                </p>
+                <hr>
+            </div>
+
+        </div>
+
+
+        <div class="event-details">
+            <div class="photo-square">
+                <img src="" alt="Photo 1">
+            </div>
+            <div class="square">
+                <h2>Когда?</h2>
+                06.10.2023
+            </div>
+            <div class="square">
+                <h2>Где?</h2>
+                Лофт-площадка FORSELF, Нижний Новгород, Зеленский съезд, 4
+            </div>
+            <div class="photo-square">
+                <img src="" alt="Photo 2">
+            </div>
+        </div>
+
+    <div class="event-schedule">
+        <h2>Встреча гостей 18:00</h2>
+        <h2>В программе:</h2>
+        <ul>
+            <li>Свадебный фуршет</li>
+            <li>Фотосъемка в студии FORSELF</li>
+            <li>Выступление Funkeys MusicBand</li>
+        </ul>
+    </div>
+
+    <div class="dress-code">
+        <h2>О ДРЕСС-КОДЕ</h2>
+        <hr>
+        <p>
+            Мы будем очень благодарны, если вы поддержите стиль и цвет нашей свадьбы в своих нарядах<br>
+            Любые оттенки бежевого и коричневого - отлично!<br>
+            Белый и черный - просто потрясающе!
+        </p>
+        <hr>
+        <p>
+            Девушки выбирают коктейльные платья, такие, как будто они собрались на самую крутую вечеринку.<br>
+            Или выбирают классику в стильном исполнении.<br>
+            Мужчины - костюмы, рубашки, туфли в цветовой гамме мероприятия.
+        </p>
+    </div>
+
+    <div class="info-block">
+        <h2>ОРГАНИЗАЦИОННЫЕ ВОПРОСЫ</h2>
+        <hr>
+        <p>
+            В день свадьбы или по любым вопросам можно обращаться к нашему свадебному организатору Дарье (+79202992967)
+        </p>
+        <hr>
+    </div>
+
+    <div class="info-block">
+        <h2>ПОЖАЛУЙСТА, ПОДТВЕРДИТЕ ВАШЕ ПРИСУТСТВИЕ ДО 01.09.2023</h2>
+        <p>(нам очень важно знать точное количество гостей, оно сильно влияет на организацию нашего праздника)</p>
+    </div>
+
+<form id="survey-form">
+    <label for="name"><h3>Ваше имя:</h3></label>
+    <input type="text" id="name" name="name" required><br><br>
+
+    <h3>Предпочтения по напиткам (можно выбрать несколько вариантов):</h3>
+    <label for="presence1"><input type="checkbox" id="presence1" name="presence" value="Я приду"> Я приду</label><br>
+    <label for="presence2"><input type="checkbox" id="presence2" name="presence" value="Прийти не получится"> Прийти не получится</label><br>
+    <label for="presence3"><input type="checkbox" id="presence3" name="presence" value="Мне нужно больше времени, чтобы дать ответ"> Мне нужно больше времени, чтобы дать ответ</label><br>
+
+    <h3>Предпочтения по напиткам (можно выбрать несколько вариантов):</h3>
+    <label for="option1"><input type="checkbox" id="option1" name="options" value="Шампанское"> Шампанское</label><br>
+    <label for="option2"><input type="checkbox" id="option2" name="options" value="Белое вино"> Белое вино</label><br>
+    <label for="option3"><input type="checkbox" id="option3" name="options" value="Розовое вино/шампанское"> Розовое вино/шампанское</label><br>
+    <label for="option4"><input type="checkbox" id="option4" name="options" value="Красное вино"> Красное вино</label><br>
+    <label for="option5"><input type="checkbox" id="option5" name="options" value="Коньяк"> Коньяк</label><br>
+    <label for="option6"><input type="checkbox" id="option6" name="options" value="Водка"> Водка</label><br>
+    <label for="option7"><input type="checkbox" id="option7" name="options" value="Виски"> Виски</label><br>
+    <label for="option8"><input type="checkbox" id="option8" name="options" value="Компотик"> Мне компотик, я ЗОЖ</label><br>
+
+    <input type="submit" value="Отправить">
+</form>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script type="text/javascript">
+    const form = document.getElementById('survey-form');
+
+    const CHAT_ID = "-1001826284527";
+    const URI_API = 'https://api.telegram.org/bot799604842:AAHnQSUGIui4pUP-PO4wBtSkYNCdxmWYc4E/sendMessage';
+
+    form.addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        const name = document.getElementById('name').value;
+
+        const selectedPresence = Array.from(document.querySelectorAll('input[name="presence"]:checked')).map(option => option.value);
+
+        const selectedOptions = Array.from(document.querySelectorAll('input[name="options"]:checked')).map(option => option.value);
+
+        const surveyResults = {
+            'Имя': name,
+            'Присутствие': selectedPresence.join(', '),
+            'Выбранные опции': selectedOptions.join(', ')
+        };
+
+        sendResultsToTelegram(surveyResults);
+        form.reset();
+    });
+
+    async function sendResultsToTelegram(results) {
+        try {
+            const telegramBotToken = URI_API;
+            const chatId = CHAT_ID;
+
+            let message = 'Новый гость:\n';
+            for (let [question, answer] of Object.entries(results)) {
+                message += `${question}: ${answer}\n`;
+            }
+
+            axios.post(URI_API,{
+                chat_id: CHAT_ID,
+                text: message
+            });
+
+
+            console.log('Результаты опроса успешно отправлены в Телеграм.');
+        } catch (error) {
+            console.error('Ошибка при отправке результатов опроса в Телеграм:', error);
+        }
+    }
+</script>
+</body>
+</html>

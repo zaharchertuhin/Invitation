@@ -1,0 +1,7 @@
+run PowerShell us Admin
+
+run " Set-ExecutionPolicy -ExecutionPolicy Unrestricted "
+
+go to "C:\Users\zahar\Desktop\Invitation"
+
+run " http-server "
