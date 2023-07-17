@@ -12,7 +12,7 @@
         </div>
 
         <div class="mainBlock">
-            <div class="maintext">
+            <div class="mainText">
                 <h1>Приглашение</h1>
             </div>
             <div class="mainImage">
@@ -69,7 +69,7 @@
         </p>
         <hr>
         <p>
-            Девушки выбирают коктейльные платья, такие, как будто они собрались на самую крутую вечеринку.<br>
+            Девушки выбирают коктейльные платья, такие как будто они собрались на самую крутую вечеринку.<br>
             Или выбирают классику в стильном исполнении.<br>
             Мужчины - костюмы, рубашки, туфли в цветовой гамме мероприятия.
         </p>
@@ -141,8 +141,8 @@
 
     async function sendResultsToTelegram(results) {
         try {
-            const telegramBotToken = URI_API;
-            const chatId = CHAT_ID;
+            // const telegramBotToken = URI_API;
+            // const chatId = CHAT_ID;
 
             let message = 'Новый гость:\n';
             for (let [question, answer] of Object.entries(results)) {

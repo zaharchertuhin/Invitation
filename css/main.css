@@ -1,11 +1,11 @@
 @font-face {
     font-family: "Vasek";
-    src: url(./font/Vasek.ttf) format("truetype");
+    src: url(../font/Vasek.ttf) format("truetype");
 }
 
 @font-face {
     font-family: "Alexander";
-    src: url(./font/Alexander.otf) format("truetype");
+    src: url(../font/Alexander.otf) format("truetype");
 }
 
 
@@ -14,7 +14,7 @@ html{
 }
 
 body{
-    margin: -60px 0px 0px 0px;
+    margin: -60px 0 0 0;
     background-color: #191919;
     color: #9c8460;
 }
@@ -83,7 +83,7 @@ hr{
     border-radius: 100px;
 }
 
-.maintext{
+.mainText{
     font-size: 56px;
     font-family: Alexander, serif;
 }
