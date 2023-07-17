@@ -1,11 +1,11 @@
 @font-face {
     font-family: "Vasek";
-    src: url(/font/Vasek.ttf) format("truetype");
+    src: url(./font/Vasek.ttf) format("truetype");
 }
 
 @font-face {
     font-family: "Alexander";
-    src: url(/font/Alexander.otf) format("truetype");
+    src: url(./font/Alexander.otf) format("truetype");
 }
 
 
