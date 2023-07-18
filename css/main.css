@@ -184,27 +184,6 @@ label {
     margin-bottom: 10px;
 }
 
-input[type="checkbox"] {
-    display: none;
-}
-.question {
-    margin-bottom: 25px;
-    border-radius: 25px;
-}
-.question label {
-    cursor: pointer;
-    padding: 10px;
-}
-
-.quest {
-    margin-bottom: 25px;
-    border-radius: 25px;
-}
-
-.quest label {
-    cursor: pointer;
-    padding: 10px;
-}
 
 input[type="text"]{
 
