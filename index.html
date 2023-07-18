@@ -15,8 +15,10 @@
             <div class="mainText">
                 <h1>Приглашение</h1>
             </div>
-            <div class="mainImage">
-                <img src="image/IMG_0669.ARW" alt="">
+            <div class="mainVideo">
+                <video preload controls autoplay loop>
+                    <source src="./video/IMG_2457.MP4" type=video/mp4>
+                </video>
             </div>
 
             <div class="event-description">
@@ -115,24 +117,102 @@
     <input type="text" id="name" name="name" required><br><br>
 
     <h1>Присутствие:</h1>
+    <div class="quest" id="quest1">
     <label for="presence1" style="font-size: 100px"><input type="radio" id="presence1" name="presence" value="Я приду" required> Я приду</label><br>
-    <label for="presence2" style="font-size: 100px"><input type="radio" id="presence2" name="presence" value="Прийти не получится"> Прийти не получится</label><br>
-    <label for="presence3" style="font-size: 100px"><input type="radio" id="presence3" name="presence" value="Мне нужно больше времени, чтобы дать ответ"> Мне нужно больше времени, чтобы дать ответ</label><br>
-
+    </div>
+        <div class="quest" id="quest2"> <label for="presence2" style="font-size: 100px"><input type="radio" id="presence2" name="presence" value="Прийти не получится"> Прийти не получится</label><br>
+        </div>
+            <div class="quest" id="quest3"><label for="presence3" style="font-size: 100px"><input type="radio" id="presence3" name="presence" value="Мне нужно больше времени, чтобы дать ответ"> Мне нужно больше времени, чтобы дать ответ</label><br>
+            </div>
     <h1>Предпочтения по напиткам (можно выбрать несколько вариантов):</h1>
-    <label for="option1" style="font-size: 100px"><input type="checkbox" id="option1" name="options" value="Шампанское"> Шампанское</label><br>
-    <label for="option2" style="font-size: 100px"><input type="checkbox" id="option2" name="options" value="Белое вино"> Белое вино</label><br>
-    <label for="option3" style="font-size: 100px"><input type="checkbox" id="option3" name="options" value="Розовое вино/шампанское"> Розовое вино/шампанское</label><br>
-    <label for="option4" style="font-size: 100px"><input type="checkbox" id="option4" name="options" value="Красное вино"> Красное вино</label><br>
-    <label for="option5" style="font-size: 100px"><input type="checkbox" id="option5" name="options" value="Коньяк"> Коньяк</label><br>
-    <label for="option6" style="font-size: 100px"><input type="checkbox" id="option6" name="options" value="Водка"> Водка</label><br>
-    <label for="option7" style="font-size: 100px"><input type="checkbox" id="option7" name="options" value="Виски"> Виски</label><br>
-    <label for="option8" style="font-size: 100px"><input type="checkbox" id="option8" name="options" value="Компотик"> Мне компотик, я ЗОЖ</label><br>
-
+    <div class="question">
+    <label for="option1" style="font-size: 100px"><input type="checkbox" id="option1" name="options" value="Шампанское"> Шампанское</label>
+    </div>
+    <div class="question">
+        <label for="option2" style="font-size: 100px"><input type="checkbox" id="option2" name="options" value="Белое вино"> Белое вино</label>
+</div>
+    <div class="question">
+        <label for="option3" style="font-size: 100px"><input type="checkbox" id="option3" name="options" value="Розовое вино/шампанское"> Розовое вино/шампанское</label>
+</div>
+    <div class="question">
+        <label for="option4" style="font-size: 100px"><input type="checkbox" id="option4" name="options" value="Красное вино"> Красное вино</label>
+</div>
+    <div class="question">
+        <label for="option5" style="font-size: 100px"><input type="checkbox" id="option5" name="options" value="Коньяк"> Коньяк</label>
+</div>
+    <div class="question">
+        <label for="option6" style="font-size: 100px"><input type="checkbox" id="option6" name="options" value="Водка"> Водка</label>
+</div>
+    <div class="question">
+    <label for="option7" style="font-size: 100px"><input type="checkbox" id="option7" name="options" value="Виски"> Виски</label>
+</div>
+    <div class="question">
+        <label for="option8" style="font-size: 100px"><input type="checkbox" id="option8" name="options" value="Компотик"> Мне компотик, я ЗОЖ</label>
+</div>
     <input type="submit" value="Отправить" style="font-family: Alexander ,serif;">
     <br>
     <br>
 </form>
+
+        <script>
+
+            const quests = document.querySelectorAll('.quest');
+
+            quests.forEach(quest => {
+                const radioButtons = quest.querySelectorAll('input[type="radio"]');
+                const labels = quest.querySelectorAll('label');
+
+                radioButtons.forEach(radioButton => {
+                    radioButton.addEventListener('change', () => {
+                        labels.forEach(label => {
+                            if (radioButton.id === 'presence1') {
+                                document.getElementById("quest1").style.backgroundColor = 'rgb(155,119,87)';
+                                document.getElementById("quest2").style.backgroundColor = '';
+                                document.getElementById("quest3").style.backgroundColor = '';
+                                document.getElementById("quest1").style.color = 'black';
+                                document.getElementById("quest2").style.color = '';
+                                document.getElementById("quest3").style.color = '';
+                            }
+
+                            if (radioButton.id === "presence2") {
+                                document.getElementById("quest1").style.backgroundColor = '';
+                                document.getElementById("quest2").style.backgroundColor = 'rgb(155,119,87)';
+                                document.getElementById("quest3").style.backgroundColor = '';
+                                document.getElementById("quest1").style.color = '';
+                                document.getElementById("quest2").style.color = 'black';
+                                document.getElementById("quest3").style.color = '';
+                            }
+                            else if (radioButton.id === "presence3"){
+                                document.getElementById("quest1").style.backgroundColor = '';
+                                document.getElementById("quest2").style.backgroundColor = '';
+                                document.getElementById("quest3").style.backgroundColor = 'rgb(155,119,87)';
+                                document.getElementById("quest1").style.color = '';
+                                document.getElementById("quest2").style.color = '';
+                                document.getElementById("quest3").style.color = 'black';
+                            }
+                        });
+                    });
+                });
+            });
+
+
+            const questions = document.querySelectorAll('.question');
+
+            questions.forEach(question => {
+                const checkbox = question.querySelector('input[type="checkbox"]');
+                const label = question.querySelector('label');
+
+                checkbox.addEventListener('change', () => {
+                    if (checkbox.checked) {
+                        question.style.backgroundColor = 'rgb(155,119,87)';
+                        label.style.color = 'black';
+                    } else {
+                        question.style.backgroundColor = '';
+                        label.style.color = '';
+                    }
+                });
+            });
+        </script>
 
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 <script type="text/javascript">
