@@ -108,11 +108,11 @@ hr{
     height: 1024px;
 }
 
-.mainVideo video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
+/*.mainVideo video {*/
+/*    width: 100%;*/
+/*    height: 100%;*/
+/*    object-fit: cover;*/
+/*}*/
 
 
 .event-details {
