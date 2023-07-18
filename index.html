@@ -16,7 +16,7 @@
                 <h1>Приглашение</h1>
             </div>
             <div class="mainVideo">
-                <video preload controls autoplay loop>
+                <video autoplay loop>
                     <source src="./video/IMG_2457.MP4" type=video/mp4>
                 </video>
             </div>
@@ -87,7 +87,6 @@
             Мужчины - костюмы, рубашки, туфли в цветовой гамме мероприятия.
         </p>
 
-<!--        <img src="./image/IMG_2508.png" style="width: inherit" alt="">-->
         <img src="./image/IMG_2489_edit.jpg" style="width: inherit" alt="">
 
         <br>
@@ -244,8 +243,6 @@
 
     async function sendResultsToTelegram(results) {
         try {
-            // const telegramBotToken = URI_API;
-            // const chatId = CHAT_ID;
 
             let message = 'Новый гость:\n';
             for (let [question, answer] of Object.entries(results)) {
