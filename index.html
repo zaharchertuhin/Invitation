@@ -203,7 +203,7 @@
                     radioButton.addEventListener('change', () => {
                         labels.forEach(label => {
                             if (radioButton.id === 'presence1') {
-                                document.getElementById("quest1").style.backgroundColor = 'rgb(155,119,87)';
+                                document.getElementById("quest1").style.backgroundColor = '#f0ded0';
                                 document.getElementById("quest2").style.backgroundColor = '';
                                 document.getElementById("quest3").style.backgroundColor = '';
                                 document.getElementById("quest1").style.color = 'black';
@@ -213,7 +213,7 @@
 
                             if (radioButton.id === "presence2") {
                                 document.getElementById("quest1").style.backgroundColor = '';
-                                document.getElementById("quest2").style.backgroundColor = 'rgb(155,119,87)';
+                                document.getElementById("quest2").style.backgroundColor = '#f0ded0';
                                 document.getElementById("quest3").style.backgroundColor = '';
                                 document.getElementById("quest1").style.color = '';
                                 document.getElementById("quest2").style.color = 'black';
@@ -222,7 +222,7 @@
                             else if (radioButton.id === "presence3"){
                                 document.getElementById("quest1").style.backgroundColor = '';
                                 document.getElementById("quest2").style.backgroundColor = '';
-                                document.getElementById("quest3").style.backgroundColor = 'rgb(155,119,87)';
+                                document.getElementById("quest3").style.backgroundColor = '#f0ded0';
                                 document.getElementById("quest1").style.color = '';
                                 document.getElementById("quest2").style.color = '';
                                 document.getElementById("quest3").style.color = 'black';
@@ -241,7 +241,7 @@
 
                 checkbox.addEventListener('change', () => {
                     if (checkbox.checked) {
-                        question.style.backgroundColor = 'rgb(155,119,87)';
+                        question.style.backgroundColor = '#f0ded0';
                         label.style.color = 'black';
                     } else {
                         question.style.backgroundColor = '';
