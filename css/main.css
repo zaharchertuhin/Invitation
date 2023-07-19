@@ -12,6 +12,8 @@
 html{
     width: 100%;
     -webkit-text-size-adjust: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
 }
 
 body{
