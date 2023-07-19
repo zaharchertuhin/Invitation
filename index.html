@@ -21,10 +21,10 @@
             </style>
 
             <div class="mainVideo">
-                <video muted autoplay loop>
-                    <source src="./video/IMG_2457.MP4" type=video/mp4 >
-                    <source src="./video/IMG_2457.mov" type=video/mov >
+                <video  muted autoplay playsinline loop>
+                    <source src="./video/IMG_2457_2.mp4" type=video/mp4 >
                     Тут должно быть красивое видео
+
                 </video>
             </div>
 
@@ -248,6 +248,36 @@
         </script>
 
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <script>
+            // document.addEventListener("DOMContentLoaded", function() {
+            //     var lazyVideos = [].slice.call(document.querySelectorAll("video.lazy"));
+            //
+            //     if ("IntersectionObserver" in window) {
+            //         var lazyVideoObserver = new IntersectionObserver(function(entries, observer) {
+            //             entries.forEach(function(video) {
+            //                 if (video.isIntersecting) {
+            //                     for (var source in video.target.children) {
+            //                         var videoSource = video.target.children[source];
+            //                         if (typeof videoSource.tagName === "string" && videoSource.tagName === "SOURCE") {
+            //                             videoSource.src = videoSource.dataset.src;
+            //                         }
+            //                     }
+            //
+            //                     video.target.load();
+            //                     video.target.classList.remove("lazy");
+            //                     lazyVideoObserver.unobserve(video.target);
+            //                 }
+            //             });
+            //         });
+            //
+            //         lazyVideos.forEach(function(lazyVideo) {
+            //             lazyVideoObserver.observe(lazyVideo);
+            //         });
+            //     }
+            // });
+        </script>
+
+
 <script type="text/javascript">
 
 
